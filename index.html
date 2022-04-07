@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adeptus Mechanicus</title>
+
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/team.css">
+
+</head>
+<body>
+
+	<nav>
+		<div class="spacer"></div>
+		<div>Home</div>
+		<div>Files</div>
+	</nav>
+
+	<main>
+		<h1>Adeptus Mechanicus</h1>
+
+		<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis veritatis ipsa sequi placeat maxime dignissimos hic? Animi facere incidunt fugit totam ducimus neque sint corrupti, odio nihil commodi aspernatur dolores praesentium architecto voluptas eius. Nisi veniam porro aspernatur reprehenderit, officiis quaerat, culpa doloremque nihil omnis enim doloribus sit incidunt? Fugit quae quia corrupti perspiciatis, nihil eaque fuga natus similique consequuntur magnam, autem ipsam id, quam vero? Tempora voluptatum amet nulla necessitatibus vel earum. Labore laborum eius eaque ducimus, nobis debitis architecto porro eligendi assumenda, praesentium maiores, vero id doloribus natus minus reprehenderit consequatur laboriosam nemo corporis voluptatem ab dolore. -->
+
+
+		<h2>Team</h2>
+
+		<div class="team">
+			<!-- aspect ratio: 7:9 -->
+			<div><img src="./images/team/naomi-yazgan.jpg"><div>Naomi Yazgan</div></div>
+			<div><img src="./images/team/jan-zimmermann.jpg"><div>Jan Zimmermann</div></div>
+			<div><img src="./images/team/merve-baykan.jpg"><div>Merve Baykan</div></div>
+			<div><img src="./images/team/daniel-michel.png"><div>Daniel Michel</div></div>
+			<div><img src="./images/team/marius-heinzmann.jpg"><div>Marius Heinzmann</div></div>
+			<div><img src="./images/team/vladislav-peshkov.jpg"><div>Vladislav Peshkov</div></div>
+		</div>
+
+		<h2>Status Documents</h2>
+		<a href="">example 1</a><br>
+		<a href="">example 2</a><br>
+		<a href="">example 3</a><br>
+
+	</main>
+	<footer>
+		Contact:
+		<a href="mailto:adeptus-mechanicus@hotmail.com">adeptus-mechanicus@hotmail.com</a>
+	</footer>
+
+	<script>
+		for (let image of document.querySelectorAll("img"))
+			image.addEventListener("error", e => e.target.style.display = "none");
+	</script>
+	
+</body>
+</html>

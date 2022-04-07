@@ -1,0 +1,35 @@
+.team
+{
+	display: grid;
+	/* grid-auto-flow: column; */
+	gap: 1em;
+	grid-template-columns: repeat(3, minmax(10em, 1fr));
+	min-width: 0;
+	width: fit-content;
+}
+.team > div
+{
+	display: grid;
+	gap: 0.7em;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	font-family: "Aldrich";
+	background-color: hsl(157, 40%, 16%);
+	padding: 0.8em;
+	/* border: 0.15em solid hsl(203, 64%, 44%); */
+	/* border-radius: 0.4em; */
+	min-width: fit-content;
+}
+.team > div > img
+{
+	width: 8em;
+	border-radius: 0em;
+	object-fit: contain;
+	aspect-ratio: 7/9;
+	/* border: 1px solid black; */
+}
+.team > div > div
+{
+
+}
