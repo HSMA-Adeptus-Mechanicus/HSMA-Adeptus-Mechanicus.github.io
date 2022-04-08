@@ -1,20 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Black+Ops+One&family=Chakra+Petch:wght@300&display=swap');
 
 
+:root.light
+{
+	color-scheme: light;
+
+	--text-color: black;
+	--background-color: hsl(0, 0%, 100%);
+	--link-color: hsl(214, 100%, 22%);
+	--link-hover-color: hsl(213, 100%, 45%);
+	--nav-color: hsl(176, 58%, 80%);
+	--accent-color: hsl(176, 54%, 75%);
+	--footer-color: hsl(176, 35%, 84%);
+}
+:root.dark
+{
+	color-scheme: dark;
+
+	--text-color: white;
+	--background-color: hsl(200, 6%, 10%);
+	--link-color: hsl(214, 70%, 55%);
+	--link-hover-color: hsl(213, 100%, 75%);
+	--nav-color: hsl(176, 21%, 13%);
+	--accent-color: hsl(176, 40%, 16%);
+	--footer-color: hsl(176, 10%, 6%);
+}
+
 
 :root
 {
-	color-scheme: dark;
-	/* font-family: Arial, Helvetica, sans-serif; */
+	color: var(--text-color);
 	font-family: "Chakra Petch";
-	color: white;
 	font-size: 18px;
 	height: 100%;
 }
 
 body
 {
-	background-color: hsl(0, 0%, 10%);
+	background-color: var(--background-color);
 	margin: 0;
 	height: 100%;
 }
@@ -27,15 +50,15 @@ h1, h2, h3, h4, h5, h6
 
 a
 {
-	color: hsl(214, 70%, 55%);
-	filter: drop-shadow(0.2em 0.2em 0.1em rgba(0, 0, 0, 0));
+	color: var(--link-color);
+	/* filter: drop-shadow(0.2em 0.2em 0.1em rgba(0, 0, 0, 0)); */
 	text-underline-offset: 0.05em;
 	transition: color .2s, filter .2s;
 }
 a:hover
 {
-	color: hsl(213, 100%, 75%);
-	filter: drop-shadow(0.1em 0.1em 0.1em rgba(0, 0, 0, 0.555));
+	color: var(--link-hover-color);
+	/* filter: drop-shadow(0.1em 0.1em 0.1em rgba(0, 0, 0, 0.555)); */
 }
 
 nav
@@ -43,12 +66,54 @@ nav
 	display: grid;
 	grid-auto-flow: column;
 	position: sticky;
-	background-color: rgb(26, 41, 35);
-	grid-template-columns: 1fr auto auto;
+	top: 0;
+	background-color: var(--nav-color);
+	grid-template-columns: auto 1fr auto auto;
+	align-items: center;
 }
-nav > div
+nav > .title
 {
-	padding: 1em 1.2em;
+	font-family: "Black Ops One";
+	font-size: 1.3em;
+}
+
+nav .theme-toggle
+{
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 0.2em;
+	cursor: pointer;
+}
+.theme-toggle > img
+{
+	height: 1em;
+}
+
+nav > div, nav > a
+{
+	padding: 0.7em 1.2em;
+}
+nav a
+{
+	color: var(--text-color);
+	text-decoration: none;
+}
+nav a::after
+{
+	background-color: var(--link-hover-color);
+	display: block;
+	content: "";
+	height: 0.1em;
+	width: 0%;
+	position: relative;
+	left: 50%;
+	transition: width .3s, left .3s;
+}
+nav a:hover::after
+{
+	left: 0%;
+	width: 100%;
 }
 
 main
@@ -61,7 +126,7 @@ main
 
 footer
 {
-	background-color: hsl(220, 10%, 6%);
+	background-color: var(--footer-color);
 	position: sticky;
 	top: 100%;
 	text-align: center;
