@@ -17,14 +17,13 @@ function initToggle()
 	elem.addEventListener("click", () =>
 	{
 		theme = theme === "light" ? "dark" : "light";
+		localStorage.setItem("theme", theme);
 		update();
 	});
 }
 
 function update()
 {
-
-	localStorage.setItem("theme", theme);
 	document.documentElement.classList.add(theme);
 	document.documentElement.classList.remove(theme === "dark" ? "light" : "dark");
 
