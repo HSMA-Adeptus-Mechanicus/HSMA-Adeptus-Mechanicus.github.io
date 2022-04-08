@@ -9,9 +9,9 @@
 	--background-color: hsl(0, 0%, 100%);
 	--link-color: hsl(214, 100%, 22%);
 	--link-hover-color: hsl(213, 100%, 45%);
-	--nav-color: hsl(176, 58%, 80%);
-	--accent-color: hsl(176, 54%, 75%);
-	--footer-color: hsl(176, 35%, 84%);
+	--nav-color: hsl(0, 0%, 81%);
+	--accent-color: hsl(215, 24%, 82%);
+	--footer-color: hsl(0, 0%, 87%);
 }
 :root.dark
 {
