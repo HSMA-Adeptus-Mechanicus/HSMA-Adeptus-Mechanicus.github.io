@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Black+Ops+One&family=Chakra+Petch:wght@300&display=swap');
+@import  url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Hind+Madurai:wght@300&display=swap');
 
 
 :root.light
@@ -9,8 +10,8 @@
 	--background-color: hsl(0, 0%, 100%);
 	--link-color: hsl(214, 100%, 22%);
 	--link-hover-color: hsl(213, 100%, 45%);
-	--nav-color: hsl(176, 58%, 80%);
-	--accent-color: hsl(176, 54%, 75%);
+	--nav-color: hsl(204, 66%, 92%);
+	--accent-color: hsl(212, 45%, 84%);
 	--footer-color: hsl(176, 35%, 84%);
 }
 :root.dark
@@ -21,16 +22,16 @@
 	--background-color: hsl(200, 6%, 10%);
 	--link-color: hsl(214, 70%, 55%);
 	--link-hover-color: hsl(213, 100%, 75%);
-	--nav-color: hsl(176, 21%, 13%);
-	--accent-color: hsl(176, 40%, 16%);
-	--footer-color: hsl(176, 10%, 6%);
+	--nav-color: hsl(180, 2%, 48%);
+	--accent-color: hsl(195, 2%, 61%);
+	--footer-color: hsl(180, 6%, 3%);
 }
 
 
 :root
 {
 	color: var(--text-color);
-	font-family: "Chakra Petch";
+	font-family: 'Hind Madurai', sans-serif;
 	font-size: 18px;
 	height: 100%;
 }
