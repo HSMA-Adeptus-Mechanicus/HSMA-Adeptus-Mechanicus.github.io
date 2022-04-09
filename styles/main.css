@@ -53,14 +53,12 @@ h1, h2, h3, h4, h5, h6
 a
 {
 	color: var(--link-color);
-	/* filter: drop-shadow(0.2em 0.2em 0.1em rgba(0, 0, 0, 0)); */
 	text-underline-offset: 0.05em;
 	transition: color .2s, filter .2s;
 }
 a:hover
 {
 	color: var(--link-hover-color);
-	/* filter: drop-shadow(0.1em 0.1em 0.1em rgba(0, 0, 0, 0.555)); */
 }
 
 nav
@@ -72,6 +70,7 @@ nav
 	background-color: var(--nav-color);
 	grid-template-columns: auto 1fr auto auto;
 	align-items: center;
+	z-index: 100;
 }
 nav > .title
 {
