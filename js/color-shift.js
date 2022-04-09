@@ -2,6 +2,26 @@ import { mulberry32 } from "./mulberry.js";
 
 window.addEventListener("load", () =>
 {
+	for (let elem of document.querySelectorAll(".team > div")) {
+
+		elem.onmouseover = function () {
+			elem.style.removeProperty("background-color");
+			let color = getComputedStyle(elem).backgroundColor;
+			let values = color.match(/(\d+).*?(\d+).*?(\d+)/).slice(1);
+			let brighten = 1.2;
+			values = values.map(v => Math.round(v * brighten));
+			elem.style.backgroundColor = `rgb(${values.join(", ")})`;
+		}
+		elem.onmouseout = function () {
+			elem.style.removeProperty("background-color");
+			let color = getComputedStyle(elem).backgroundColor;
+			let values = color.match(/(\d+).*?(\d+).*?(\d+)/).slice(1);
+			let brighten = 1.0;
+			values = values.map(v => Math.round(v * brighten));
+			elem.style.backgroundColor = `rgb(${values.join(", ")})`;
+		}
+	}
+
 	shiftColors();
 	let observer = new MutationObserver(() =>
 	{
@@ -18,10 +38,8 @@ function shiftColors()
 		elem.style.removeProperty("background-color");
 		let color = getComputedStyle(elem).backgroundColor;
 		let values = color.match(/(\d+).*?(\d+).*?(\d+)/).slice(1);
-		// let brighten = rand.randRange(0.6, 1.1);
-		let brighten = rand.randRange(0.8, 1.2);
-
-		values = values.map(v => Math.round(v));
+		let brighten = 1.0;
+		values = values.map(v => Math.round(v * brighten));
 		elem.style.backgroundColor = `rgb(${values.join(", ")})`;
 	}
 }
