@@ -1,6 +1,6 @@
 import { mulberry32 } from "./mulberry.js";
 
-window.addEventListener("load", () =>
+/*window.addEventListener("load", () =>
 {
 	shiftColors();
 	let observer = new MutationObserver(() =>
@@ -8,7 +8,7 @@ window.addEventListener("load", () =>
 		shiftColors();
 	});
 	observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-});
+});*/
 
 function shiftColors()
 {
