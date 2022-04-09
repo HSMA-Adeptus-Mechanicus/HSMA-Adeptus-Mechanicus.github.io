@@ -19,8 +19,7 @@ function shiftColors()
 		let color = getComputedStyle(elem).backgroundColor;
 		let values = color.match(/(\d+).*?(\d+).*?(\d+)/).slice(1);
 		// let brighten = rand.randRange(0.6, 1.1);
-		//let brighten = rand.randRange(0.8, 1.2);
-		let brighten = 1.0;
+		let brighten = rand.randRange(0.8, 1.2);
 		values = values.map(v => Math.round(v * brighten));
 		elem.style.backgroundColor = `rgb(${values.join(", ")})`;
 	}
