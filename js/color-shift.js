@@ -13,13 +13,15 @@ window.addEventListener("load", () =>
 function shiftColors()
 {
 	let rand = mulberry32(87342697);
-	for (let elem of document.querySelectorAll(".team > div"))
+	for (let elem of document.querySelectorAll(".team .front"))
 	{
 		elem.style.removeProperty("background-color");
 		let color = getComputedStyle(elem).backgroundColor;
 		let values = color.match(/(\d+).*?(\d+).*?(\d+)/).slice(1);
 		// let brighten = rand.randRange(0.6, 1.1);
-		let brighten = rand.randRange(0.9, 1.2);
+		let brighten = rand.randRange(0.8, 1.2);
+
+		values = values.map(v => Math.round(v));
 		values = values.map(v => Math.round(v * brighten));
 		elem.style.backgroundColor = `rgb(${values.join(", ")})`;
 	}

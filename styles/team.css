@@ -9,30 +9,76 @@
 }
 .team > div
 {
+	--transition-time: .15s;
+	position: relative;
+}
+.team > div > div
+{
+	height: calc(100% - 2.4em);
+	width: calc(100% - 2.4em);
+	padding: 1.2em;
+	border-radius: 0.4em;
+}
+
+.team .front
+{
+	background-color: var(--card-color);
 	display: grid;
 	gap: 1em;
 	justify-items: center;
 	align-items: center;
 	text-align: center;
-	background-color: var(--accent-color);
-	padding: 1.2em;
-	/* border: 0.15em solid hsl(203, 64%, 44%); */
-	border-radius: 0.4em;
+
 	min-width: fit-content;
 }
-.team > div > img
+.team .front > img
 {
-	width: 8em;
+	width: 10em;
 	border-radius: 0em;
 	object-fit: contain;
 	aspect-ratio: 7/9;
 	/* border: 1px solid black; */
 }
-.team > div > div > div:first-child
+.team > div > div div:first-child
 {
 	font-family: "Aldrich";
 }
-.team > div > div
-{
 
+.team .back
+{
+	background-color: var(--card-back-color);
+	position: absolute;
+	top: 0em;
+	left: 0;
+	display: grid;
+	gap: 0.3em;
+	align-content: start;
+}
+
+
+
+.team .front
+{
+	transform: scale(99.9%, 100%);
+	-webkit-transform: scale(1, 1);
+	transition: transform var(--transition-time) var(--transition-time) ease-out;
+}
+.team .back
+{
+	transform: scale(0%, 100%);
+	-webkit-transform: scale(0, 1);
+	transition: transform var(--transition-time) 0s ease-in;
+}
+.team > div:hover .front
+{
+	transform: scale(0%, 100%);
+	-webkit-transform: scale(0, 1);
+	transition: transform var(--transition-time) 0s ease-in;
+}
+
+.team > div:hover .back
+{
+	transform: scale(99.9%, 100%);
+	-webkit-transform: scale(1, 1);
+	transition: transform var(--transition-time) var(--transition-time) ease-out;
 }
