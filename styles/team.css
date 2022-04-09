@@ -48,7 +48,7 @@
 {
 	background-color: var(--card-back-color);
 	position: absolute;
-	top: 0;
+	top: 0em;
 	left: 0;
 	display: grid;
 	gap: 0.3em;
@@ -60,21 +60,25 @@
 .team .front
 {
 	transform: scale(99.9%, 100%);
+	-webkit-transform: scale(1, 1);
 	transition: transform var(--transition-time) var(--transition-time) ease-out;
 }
 .team .back
 {
 	transform: scale(0%, 100%);
+	-webkit-transform: scale(0, 1);
 	transition: transform var(--transition-time) 0s ease-in;
 }
 .team > div:hover .front
 {
 	transform: scale(0%, 100%);
+	-webkit-transform: scale(0, 1);
 	transition: transform var(--transition-time) 0s ease-in;
 }
 
 .team > div:hover .back
 {
 	transform: scale(99.9%, 100%);
+	-webkit-transform: scale(1, 1);
 	transition: transform var(--transition-time) var(--transition-time) ease-out;
 }
