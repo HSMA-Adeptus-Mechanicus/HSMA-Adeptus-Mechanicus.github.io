@@ -10,7 +10,8 @@
 	--link-color: hsl(214, 100%, 22%);
 	--link-hover-color: hsl(213, 100%, 45%);
 	--nav-color: hsl(0, 0%, 81%);
-	--accent-color: hsl(215, 24%, 82%);
+	--card-color: hsl(215, 24%, 82%);
+	--card-back-color: hsl(195, 40%, 82%);
 	--footer-color: hsl(0, 0%, 87%);
 }
 :root.dark
@@ -22,7 +23,8 @@
 	--link-color: hsl(214, 70%, 55%);
 	--link-hover-color: hsl(213, 100%, 75%);
 	--nav-color: hsl(176, 21%, 13%);
-	--accent-color: hsl(176, 40%, 16%);
+	--card-color: hsl(176, 40%, 16%);
+	--card-back-color: rgb(27, 64, 75);
 	--footer-color: hsl(176, 10%, 6%);
 }
 
