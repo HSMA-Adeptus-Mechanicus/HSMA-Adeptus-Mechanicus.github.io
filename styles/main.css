@@ -76,6 +76,12 @@ nav > .title
 {
 	font-family: "Black Ops One";
 	font-size: 1.3em;
+	padding: 0em;
+	padding-top: 0.2em;
+}
+.title > img
+{
+	height: 2.5em;
 }
 
 nav .theme-toggle
