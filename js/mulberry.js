@@ -1,6 +1,7 @@
 export function mulberry32(a = ~~(Math.random() * 4294967296))
 {
 	return {
+		/** @returns {number} */
 		next()
 		{
 			a |= 0; a = a + 0x6D2B79F5 | 0;
@@ -8,10 +9,18 @@ export function mulberry32(a = ~~(Math.random() * 4294967296))
 			t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
 			return ((t ^ t >>> 14) >>> 0) / 4294967296;
 		},
+		/**
+		 * @param {number} min 
+		 * @param {number} max 
+		 */
 		randRange(min, max)
 		{
 			return map(this.next(), [0, 1], [min, max]);
 		},
+		/**
+		 * @param {number} min 
+		 * @param {number} max 
+		 */
 		randIntRange(min, max)
 		{
 			return Math.floor(this.randRange(min, max + 1));
@@ -33,6 +42,13 @@ export function mulberry32(a = ~~(Math.random() * 4294967296))
 		},
 	}
 }
+/**
+ * 
+ * @param {number} val 
+ * @param {[number, number]} param1 
+ * @param {[number, number]} param2 
+ * @returns 
+ */
 function map(val, [fromMin, fromMax], [toMin, toMax])
 {
 	return (val - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;

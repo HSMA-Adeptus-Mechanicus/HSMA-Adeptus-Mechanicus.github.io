@@ -136,7 +136,7 @@ nav a:hover::after, .hover-underline:hover::after
 main
 {
 	margin: auto;
-	width: fit-content;
+	width: min-content;
 	padding: 2em;
 }
 

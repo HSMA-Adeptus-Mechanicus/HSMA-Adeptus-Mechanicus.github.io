@@ -1,16 +1,28 @@
 .team
 {
 	display: grid;
-	/* grid-auto-flow: column; */
 	gap: 1em;
 	grid-template-columns: repeat(3, minmax(10em, 1fr));
-	min-width: 0;
-	width: fit-content;
+	min-width: max-content;
+	width: max-content;
+	margin: auto;
 }
+
+@media screen and (max-width: 50em)
+{
+	.team
+	{
+		grid-template-columns: repeat(2, minmax(10em, 1fr));
+	}
+}
+
+
 .team > div
 {
 	--transition-time: .15s;
 	position: relative;
+	/* perspective: 800px; */
+	perspective: 50em;
 }
 .team > div > div
 {
@@ -59,30 +71,30 @@
 
 .team .front
 {
-	transform: scale(99.9%, 100%);
-	-webkit-transform: scale(1, 1);
-	transition: transform var(--transition-time) var(--transition-time) ease-out;
+	transform: rotateY(0.01deg);
+	opacity: 1;
+	transition: transform var(--transition-time) var(--transition-time) ease-out, opacity 0s var(--transition-time);
 }
 .team .back
 {
-	transform: scale(0%, 100%);
-	-webkit-transform: scale(0, 1);
-	transition: transform var(--transition-time) 0s ease-in;
+	transform: rotateY(90deg);
+	opacity: 0;
+	transition: transform var(--transition-time) 0s ease-in, opacity 0s var(--transition-time);
 }
 .team > div:hover .front
 {
-	transform: scale(0%, 100%);
-	-webkit-transform: scale(0, 1);
-	transition: transform var(--transition-time) 0s ease-in;
+	transform: rotateY(-90deg);
+	opacity: 0;
+	transition: transform var(--transition-time) 0s ease-in, opacity 0s var(--transition-time);
 }
 
 .team > div:hover .back
 {
-	transform: scale(99.9%, 100%);
-	-webkit-transform: scale(1, 1);
-	transition: transform var(--transition-time) var(--transition-time) ease-out;
+	transform: rotateY(-0.01deg);
+	opacity: 1;
+	transition: transform var(--transition-time) var(--transition-time) ease-out, opacity 0s var(--transition-time);
 }
+
 .team-description
 {
-
 }

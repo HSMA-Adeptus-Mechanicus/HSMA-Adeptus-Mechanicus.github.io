@@ -1,0 +1,43 @@
+
+@media print
+{
+	:root
+	{
+		font-size: 16px;
+	}
+
+	h1
+	{
+		margin-top: 0;
+	}
+	
+	nav
+	{
+		display: none;
+	}
+	
+	main
+	{
+		width: unset;
+	}
+	
+	.team
+	{
+		margin: auto;
+	}
+
+	.team .front
+	{
+		transform: rotateY(0deg) !important;
+		opacity: 1 !important;
+	}
+	.team .back
+	{
+		opacity: 0 !important;
+	}
+	
+	.team .front > img
+	{
+		width: 8em;
+	}
+}
