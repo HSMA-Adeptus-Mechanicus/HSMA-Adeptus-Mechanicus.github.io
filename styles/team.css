@@ -82,3 +82,7 @@
 	-webkit-transform: scale(1, 1);
 	transition: transform var(--transition-time) var(--transition-time) ease-out;
 }
+.team-description
+{
+
+}
