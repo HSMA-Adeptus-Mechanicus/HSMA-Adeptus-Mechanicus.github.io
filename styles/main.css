@@ -6,13 +6,13 @@
 	color-scheme: light;
 
 	--text-color: black;
-	--background-color: hsl(0, 0%, 100%);
+	--background-color: hsl(166, 28%, 82%);
 	--link-color: hsl(214, 100%, 22%);
-	--link-hover-color: hsl(213, 100%, 45%);
-	--nav-color: hsl(174, 45%, 85%);
-	--card-color: hsl(200, 68%, 85%);
-	--card-back-color: hsl(174, 47%, 78%);
-	--footer-color: hsl(0, 0%, 87%);
+	--link-hover-color: hsl(213, 96%, 39%);
+	--nav-color: hsl(200, 48%, 56%);
+	--card-color: hsl(200, 40%, 60%);
+	--card-back-color: hsl(174, 41%, 55%);
+	--footer-color: hsl(184, 34%, 71%);
 }
 :root.dark
 {
