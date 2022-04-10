@@ -9,7 +9,7 @@
 	--background-color: hsl(0, 0%, 100%);
 	--link-color: hsl(214, 100%, 22%);
 	--link-hover-color: hsl(213, 100%, 45%);
-	--nav-color: hsl(0, 0%, 81%);
+	--nav-color: hsl(214, 28%, 76%);
 	--card-color: hsl(215, 24%, 82%);
 	--card-back-color: hsl(195, 40%, 82%);
 	--footer-color: hsl(0, 0%, 87%);
@@ -34,14 +34,14 @@
 	color: var(--text-color);
 	font-family: "Chakra Petch";
 	font-size: 18px;
-	height: 100%;
+	min-height: 100%;
 }
 
 body
 {
 	background-color: var(--background-color);
 	margin: 0;
-	height: 100%;
+	min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6
@@ -78,6 +78,7 @@ nav
 	position: sticky;
 	top: 0;
 	background-color: var(--nav-color);
+	box-shadow: 0em 0.1em 0.5em rgba(0, 0, 0, 0.247);
 	grid-template-columns: auto 1fr auto auto;
 	align-items: center;
 	z-index: 100;
