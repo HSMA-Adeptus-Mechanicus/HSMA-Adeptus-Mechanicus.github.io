@@ -9,9 +9,9 @@
 	--background-color: hsl(0, 0%, 100%);
 	--link-color: hsl(214, 100%, 22%);
 	--link-hover-color: hsl(213, 100%, 45%);
-	--nav-color: hsl(0, 0%, 81%);
-	--card-color: hsl(215, 24%, 82%);
-	--card-back-color: hsl(195, 40%, 82%);
+	--nav-color: hsl(174, 45%, 85%);
+	--card-color: hsl(200, 68%, 85%);
+	--card-back-color: hsl(174, 47%, 78%);
 	--footer-color: hsl(0, 0%, 87%);
 }
 :root.dark
@@ -22,9 +22,9 @@
 	--background-color: hsl(200, 6%, 10%);
 	--link-color: hsl(214, 70%, 55%);
 	--link-hover-color: hsl(213, 100%, 75%);
-	--nav-color: hsl(176, 21%, 13%);
+	--nav-color: hsl(194, 47%, 15%);
 	--card-color: hsl(176, 40%, 16%);
-	--card-back-color: rgb(27, 64, 75);
+	--card-back-color: hsl(194, 47%, 20%);
 	--footer-color: hsl(176, 10%, 6%);
 }
 
