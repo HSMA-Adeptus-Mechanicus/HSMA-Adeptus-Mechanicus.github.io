@@ -61,6 +61,16 @@ a:hover
 	color: var(--link-hover-color);
 }
 
+.theme-icon
+{
+	display: inline;
+	margin-bottom: -0.4em;
+}
+.dark .theme-icon
+{
+	filter: invert(1);
+}
+
 nav
 {
 	display: grid;
@@ -99,22 +109,28 @@ nav a
 {
 	color: var(--text-color);
 	text-decoration: none;
+	--underline-color: var(--link-hover-color);
 }
-nav a::after
+nav a, .hover-underline
 {
-	background-color: var(--link-hover-color);
+	position: relative;
+}
+nav a::after, .hover-underline::after
+{
+	background-color: var(--underline-color);
 	display: block;
 	content: "";
-	height: 0.1em;
+	height: 0.15em;
 	width: 0%;
-	position: relative;
+	position: absolute;
+	top: 80%;
 	left: 50%;
 	transition: width .3s, left .3s;
 }
-nav a:hover::after
+nav a:hover::after, .hover-underline:hover::after
 {
-	left: 0%;
-	width: 100%;
+	left: 1em;
+	width: calc(100% - 2em);
 }
 
 main
