@@ -94,3 +94,7 @@
 	opacity: 1;
 	transition: transform var(--transition-time) var(--transition-time) ease-out, opacity 0s var(--transition-time);
 }
+
+.team-description
+{
+}

@@ -21,7 +21,6 @@ function shiftColors()
 		let brighten = rand.randRange(-10, 10);
 		let diff = values.map(v => (v + brighten) / v).reduce((a, c) => a + c) / 3;
 
-		values = values.map(v => Math.round(v));
 		values = values.map(v => Math.round(v * diff));
 		elem.style.backgroundColor = `rgb(${values.join(", ")})`;
 	}
