@@ -40,3 +40,11 @@
 		width: 8em;
 	}
 }
+
+@media not print
+{
+	.print-only
+	{
+		display: none;
+	}
+}
