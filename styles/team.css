@@ -79,12 +79,14 @@
 {
 	transform: rotateY(90deg);
 	opacity: 0;
+	pointer-events: none;
 	transition: transform var(--transition-time) 0s ease-in, opacity 0s var(--transition-time);
 }
 .team > div:hover .front
 {
 	transform: rotateY(-90deg);
 	opacity: 0;
+	pointer-events: none;
 	transition: transform var(--transition-time) 0s ease-in, opacity 0s var(--transition-time);
 }
 
@@ -92,6 +94,7 @@
 {
 	transform: rotateY(-0.01deg);
 	opacity: 1;
+	pointer-events: unset;
 	transition: transform var(--transition-time) var(--transition-time) ease-out, opacity 0s var(--transition-time);
 }
 
