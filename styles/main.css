@@ -146,6 +146,7 @@ main
 	margin: auto;
 	width: min-content;
 	padding: 2em;
+	min-width: 20em;
 }
 
 
